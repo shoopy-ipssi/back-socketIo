@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  node:
+    image: "node"
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8080"
+    command: "npm start"
